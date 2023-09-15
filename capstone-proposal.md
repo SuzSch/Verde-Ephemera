@@ -17,6 +17,7 @@
 
 ## Technologies and Resources
 - **Frontend Framework:** React
+- **Backend Framework:** ASP.NET
 - **Optional Language:** TypeScript
 - **Library API:** Consider using [Google Books](https://developers.google.com/books) API or [Open Library](https://openlibrary.org/developers/api) API for the Library section.
 - **E-commerce/Online Ordering/Reservations:** Explore options for implementing these features for both the Library and Florist sections.
@@ -26,6 +27,7 @@
 - Enhance functionality and user experience across all sections.
 
 ## Additional Resources for Next Steps
-- Identify tools, frameworks, libraries, and APIs needed for advanced features in the Cafe and Bakery sections.
+- Could add a MySQL (or other) database to keep track of menu items/customers.
+- 
 
 
