@@ -9,3 +9,4 @@
 * 12:22: Update README with current project details. 
 * 12:55: Begin [Figma flowchart](https://www.figma.com/file/2uYqxlERZid1cyefwdClZ0/Website-Flowchart-%7C--VerdeEphemera?type=whiteboard&node-id=0%3A1&t=jq1YIveZCLogeXXr-1) to plan the structure of the website.
 * 1:36: Research options for website layout ideas eg: infinite scroll, animations, image options etc. 
+* 3:55 work on Figma flowchart for structure. 
