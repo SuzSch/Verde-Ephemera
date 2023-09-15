@@ -11,9 +11,9 @@
 
 ## Minimum Viable Product (MVP) Features
 - Develop a main splash page that is aesthetically pleasing and fully functional.
-- Fully build at least two out of the four business branches: Library and Florist.
+- Fully build at least two out of the four business branches: Would like to first focus on  Library and Florist.
 - Focus on making the Library and Florist sections fully functional.
-- Create static pages with limited functionality for the Cafe and Bakery, to be expanded upon as time allows and as further practice.
+- Create static pages with limited functionality for the Cafe and Bakery, to be expanded upon as time allows and for further programming practice.
 
 ## Technologies and Resources
 - **Frontend Framework:** React
@@ -25,9 +25,10 @@
 ## Next Steps after MVP
 - Continue building out the Cafe and Bakery sections of the website.
 - Enhance functionality and user experience across all sections.
+- Add an Event Calendar.
 
 ## Additional Resources for Next Steps
 - Could add a MySQL (or other) database to keep track of menu items/customers.
-- 
+
 
 
