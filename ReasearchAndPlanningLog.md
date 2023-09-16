@@ -11,3 +11,4 @@
 * 1:36: Research options for website layout ideas eg: infinite scroll, animations, image options etc. 
 * 3:55 Work on Figma flowchart for structure. 
 * 4:29 Continue to work on flowchart of structure.
+* 5:00 Add more detail and styling ideas to flowchart.
