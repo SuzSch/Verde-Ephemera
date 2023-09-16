@@ -12,3 +12,4 @@
 * 3:55 Work on Figma flowchart for structure. 
 * 4:29 Continue to work on flowchart of structure.
 * 5:00 Add more detail and styling ideas to flowchart.
+* 5:30 Add image place holders and build out styling and structure. 
