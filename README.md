@@ -1,4 +1,4 @@
-<img src="./images/readme-photo.jpg" alt="A person pouring coffee from a Chemex pour-over coffee maker into a wite cup. There is an open book and an plate of croissants on the table. " width="600" height="600" />
+<img src=".././verde-ephemera/src/images/readme-photo.jpg" alt="A person pouring coffee from a Chemex pour-over coffee maker into a wite cup. There is an open book and an plate of croissants on the table. " width="600" height="600" />
 
 # VerdeEphemera - "Savor Life's Temporal Joys"
 
