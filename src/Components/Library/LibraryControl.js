@@ -1,10 +1,15 @@
 import React from "react";
-import TopBookList from './TopBookList';
-import SearchButtons from './SearchButtons';
-import BookDetail from '/BookDetail';
+import Header from "../Header";
 
-function LibraryControl(){
 
+function LibraryControl() {
+
+  return (
+    <div>
+      <Header />
+      <h1>This is the Library Page</h1>
+    </div>
+  );
 }
 
 export default LibraryControl;
