@@ -1,0 +1,51 @@
+/* CSS for Header Component */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #093303;
+  color: white;
+}
+
+.logo a,
+.fun-thing a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1ca77;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+ 
+}
+
+.dropdown-list li {
+  padding: 5px 20px;
+}
+
+.dropdown-list a {
+  text-decoration: none;
+  color: #093303;
+  font-size: 14px;
+}
