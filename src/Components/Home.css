@@ -1,0 +1,34 @@
+/* Home.css */
+
+.main-box {
+  background-color: #280544;
+  padding: 20px;
+  text-align: center;
+  color: antiquewhite;
+}
+
+.picture-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.picture-gallery img {
+  margin: 0 10px;
+  max-width: 200px;
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.shop-photo img {
+  max-width: 300px;
+}
+
+.shop-description {
+  flex-grow: 1;
+  padding-left: 20px;
+}
