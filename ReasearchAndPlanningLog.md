@@ -20,3 +20,4 @@
 * 9:30: Begin work on header component using React router. 
 * 11:00: Continue working on the header as a reusable component for app. 
 * 11:40: Add basic logic and some css for Header component.
+* 12:16: WIP Home component and routes. 

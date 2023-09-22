@@ -1,13 +1,16 @@
-import Header from './Header';
 import React from 'react';
-import DropdownMenu from "./DropdownMenu";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+
 
 function App() {
   return (
-    <React.Fragment>
-      <Header />
-      <DropdownMenu />
-    </React.Fragment>
-)}
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </Router>
+  );
+}
 
 export default App;
