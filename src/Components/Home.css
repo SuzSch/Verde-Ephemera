@@ -1,7 +1,7 @@
 /* Home.css */
 
 .main-box {
-  background-color: #280544;
+  background-color: #796887;
   padding: 20px;
   text-align: center;
   color: antiquewhite;
@@ -26,6 +26,7 @@
 
 .shop-photo img {
   max-width: 300px;
+  padding: 30px;
 }
 
 .shop-description {

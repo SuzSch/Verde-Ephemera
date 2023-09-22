@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link, useNavigate} from 'react-router-dom';
 import './Header.css';
 
 function Header() {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -12,6 +14,11 @@ function Header() {
   const closeDropdown = () => {
     setIsDropdownOpen(false);
   };
+
+  const handleMenuClick = (path) => {
+    navigate(path);
+    closeDropdown();
+  }
 
   return (
     <header className="header">
@@ -23,26 +30,26 @@ function Header() {
           What We Offer
         </button>
         {isDropdownOpen && (
-          <ul className="dropdown-list">
+          <ul className="dropdown-list" style={{ display: isDropdownOpen ? 'block' : 'none' }} >
             <li>
-              <a href="/library" onClick={closeDropdown}>
+              <Link to="/library" onClick={() => handleMenuClick('/library')}>
                 Library
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/florist" onClick={closeDropdown}>
+              <Link to="/florist" onClick={() => handleMenuClick('/florist')}>
                 Florist
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/cafe" onClick={closeDropdown}>
+              <Link to="/cafe" onClick={() => handleMenuClick('/cafe')}>
                 Cafe
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/bakery" onClick={closeDropdown}>
+              <Link to="/bakery" onClick={() => handleMenuClick('/bakery')}>
                 Bakery
-              </a>
+              </Link>
             </li>
           </ul>
         )}

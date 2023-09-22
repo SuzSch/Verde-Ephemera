@@ -21,3 +21,6 @@
 * 11:00: Continue working on the header as a reusable component for app. 
 * 11:40: Add basic logic and some css for Header component.
 * 12:16: WIP Home component and routes. 
+* 2:00: WIP Home component and css. 
+* 3:58: Work on routs to other components from dropdown menu in Header component.
+

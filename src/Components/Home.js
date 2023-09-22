@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header'; 
 import './Home.css'; 
+import shopPhoto from '../images/home-page-pic.jpg';
 
 function Home() {
   return (
@@ -17,7 +18,7 @@ function Home() {
       </div>
       <div className="shop-info">
         <div className="shop-photo">
-          <img src="../images/home-page-pic.jpg" alt="Shop Photo" />
+          <img src={shopPhoto} alt="Shop Photo" />
         </div>
         <div className="shop-description">
           <h2>About</h2>
