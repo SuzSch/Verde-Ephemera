@@ -17,4 +17,4 @@
 #### Friday, 9/22
 
 * 9:00: Research using TypeScript for my project.
- 
+* 9:30: Begin work on header component using React router. 
