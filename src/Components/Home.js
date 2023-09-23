@@ -1,7 +1,12 @@
 import React from 'react';
 import Header from './Header'; 
+import Footer from './Footer';
 import './Home.css'; 
 import shopPhoto from '../images/home-page-pic.jpg';
+import bakeryHomePhoto from '../images/bakery-home.jpg';
+import floristHomePhoto from '../images/florist-home.jpg';
+import libraryHomePhoto from '../images/library-home.jpg';
+import cafeHomePhoto from '../images/cafe-home.jpg';
 
 function Home() {
   return (
@@ -11,9 +16,10 @@ function Home() {
         <h1>Welcome to VerdeEphemera</h1>
         <h3>(Savor Life's Temporal Joys)</h3>
         <div className="picture-gallery">
-          <img src="image1.jpg" alt="Image 1" />
-          <img src="image2.jpg" alt="Image 2" />
-          <img src="image3.jpg" alt="Image 3" />
+          <img src={bakeryHomePhoto} alt="Image 1" />
+          <img src={floristHomePhoto} alt="Image 2" />
+          <img src={libraryHomePhoto} alt="Image 3" />
+          <img src={cafeHomePhoto} alt="Image 3" />
         </div>
       </div>
       <div className="shop-info">
@@ -29,6 +35,7 @@ function Home() {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

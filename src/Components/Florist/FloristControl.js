@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../Header";
+import Footer from "../Footer";
+
 
 function FloristControl() {
 
@@ -8,6 +10,7 @@ function FloristControl() {
     <div>
       <Header />
       <h1>This is the Florist Page</h1>
+      <Footer />
     </div>
   );
 }

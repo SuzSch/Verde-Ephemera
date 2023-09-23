@@ -24,4 +24,5 @@
 * 2:00: WIP Home component and css. 
 * 3:58: Work on routes to other components from dropdown menu in Header component.
 * 4:31: Add correct routes to Library and Florist main Components, start Footer component.
+* 5:07: Add, style and import Footer component, Add placeholder images to home page.
 
