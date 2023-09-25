@@ -29,3 +29,4 @@
 #### Monday, 9/25
 
 * 3:55 Work on reusable Slider component.
+* 4:36 More research on how to make a slider component. 
