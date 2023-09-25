@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
-import Library from './Library/LibraryControl'
-import Florist from './Florist/FloristControl'
 import LibraryControl from './Library/LibraryControl';
 import FloristControl from './Florist/FloristControl';
 

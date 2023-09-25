@@ -17,6 +17,7 @@
 .picture-gallery img {
   margin: 0 10px;
   max-width: 25%;
+  height: 350px;
 }
 
 .shop-info {

@@ -26,3 +26,6 @@
 * 4:31: Add correct routes to Library and Florist main Components, start Footer component.
 * 5:07: Add, style and import Footer component, Add placeholder images to home page.
 
+#### Monday, 9/25
+
+* 3:55 Work on reusable Slider component.
