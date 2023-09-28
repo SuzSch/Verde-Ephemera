@@ -1,10 +1,8 @@
 import React from 'react';
 
-function Item({ title, description, price, image, buttonText,  }) {
+function Item({ title, description, price, image, buttonText, onButtonClick }) {
 
-  const onButtonClick = () => {
-    // logic for clicking button//
-  };
+
   return (
     <div className="item">
       <img src={image} alt={title} />
@@ -13,6 +11,7 @@ function Item({ title, description, price, image, buttonText,  }) {
       <p>{price}</p>
       <button onClick={onButtonClick}>{buttonText}</button>
     </div>
+   
   );
 }
 

@@ -13,19 +13,19 @@ function LibraryControl() {
     {
       title: 'Book Title',
       description: 'A great book.',
-      image: { librarySlider1 },
+      image: librarySlider1,
     },
 
     {
       title: 'Book Title',
       description: 'A great book.',
-      image: { librarySlider1 },
+      image: librarySlider1,
     },
 
     {
       title: 'Book Title',
       description: 'A great book.',
-      image: { librarySlider1 } ,
+      image: librarySlider1,
     },
   ];
   const sliderImages = [librarySlider1, librarySlider2, librarySlider3];
@@ -39,8 +39,9 @@ function LibraryControl() {
         autoplay={true}
       />
       <h2>This is some text about the library and how cool it is.</h2>
-      <ItemList items={libraryItems} />
-      
+      <ItemList 
+      items={libraryItems} 
+      buttonText="Check Me Out"/>
       <Footer />
     </div>
   );

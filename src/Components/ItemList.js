@@ -2,7 +2,7 @@ import React from 'react';
 import Item from './Item';
 import './ItemList.css'; 
 
-function ItemList({ items }) {
+function ItemList({ items, buttonText, handleButtonClick }) {
   return (
     <div className="item-list">
       {items.map((item, index) => (
@@ -12,6 +12,8 @@ function ItemList({ items }) {
           description={item.description}
           price={item.price}
           image={item.image}
+          buttonText={buttonText}
+          onButtonClick={handleButtonClick}
         />
       ))}
     </div>

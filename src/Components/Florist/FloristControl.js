@@ -16,21 +16,21 @@ function FloristControl() {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
       price: '$25',
-      image: 'floristSlider1',
+      image: floristSlider1,
     },
 
     {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
       price: '$25',
-      image: { floristSlider1 },
+      image: floristSlider1,
     },
 
     {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
       price: '$25',
-      image: { floristSlider1 },
+      image: floristSlider1,
     },
   ];
 
@@ -43,7 +43,7 @@ function FloristControl() {
 
       <Slider images={sliderImages} interval={5000} autoplay={true} />
       <h2>Ths is some text about what the florist has to offer.</h2>
-      <ItemList items={floristItems} />
+      <ItemList items={floristItems} buttonText='See Options'/>
       <Footer />
     </div>
   );
