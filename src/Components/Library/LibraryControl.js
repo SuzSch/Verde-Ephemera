@@ -4,7 +4,7 @@ import Footer from "../Footer";
 import Slider from "../Slider";
 import librarySlider1 from "../../images/slider-book1.jpeg";
 import librarySlider2 from "../../images/book-4.jpg";
-import librarySlider3 from "../../images/slider-book3.jpg";
+import librarySlider3 from "../../images/book-5.jpg";
 import ItemList from "../ItemList";
 
 function LibraryControl() {
