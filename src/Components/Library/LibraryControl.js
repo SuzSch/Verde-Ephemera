@@ -3,10 +3,31 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Slider from "../Slider";
 import librarySlider1 from "../../images/slider-book1.jpeg";
-import librarySlider2 from "../../images/slider-book2.jpg";
+import librarySlider2 from "../../images/book-4.jpg";
 import librarySlider3 from "../../images/slider-book3.jpg";
+import ItemList from "../ItemList";
 
 function LibraryControl() {
+
+  const libraryItems = [
+    {
+      title: 'Book Title',
+      description: 'A great book.',
+      image: { librarySlider1 },
+    },
+
+    {
+      title: 'Book Title',
+      description: 'A great book.',
+      image: { librarySlider1 },
+    },
+
+    {
+      title: 'Book Title',
+      description: 'A great book.',
+      image: { librarySlider1 } ,
+    },
+  ];
   const sliderImages = [librarySlider1, librarySlider2, librarySlider3];
   return (
     <div>
@@ -17,10 +38,9 @@ function LibraryControl() {
         interval={5000}
         autoplay={true}
       />
-      <h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-        vitae elit libero, a pharetra augue. Sed posuere consectetur est at
-        lobortis. Vestibulum id ligula porta felis euismod semper.
-      </h2>
+      <h2>This is some text about the library and how cool it is.</h2>
+      <ItemList items={libraryItems} />
+      
       <Footer />
     </div>
   );

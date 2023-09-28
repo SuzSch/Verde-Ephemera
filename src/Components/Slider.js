@@ -24,6 +24,8 @@ function Slider({ images, interval, autoplay }) {
       showThumbs={false}
       style={sliderStyles}
       showStatus={false}
+      infiniteLoop={true}
+      
     >
       {images.map((image, index) => (
         <div key={index} style={slideStyles}>
