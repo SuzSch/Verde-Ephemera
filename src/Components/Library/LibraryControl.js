@@ -19,13 +19,13 @@ function LibraryControl() {
     {
       title: 'Book Title',
       description: 'A great book.',
-      image: librarySlider1,
+      image: librarySlider2,
     },
 
     {
       title: 'Book Title',
       description: 'A great book.',
-      image: librarySlider1,
+      image: librarySlider3,
     },
   ];
   const sliderImages = [librarySlider1, librarySlider2, librarySlider3];

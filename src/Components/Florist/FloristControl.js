@@ -16,7 +16,7 @@ function FloristControl() {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
       price: '$25',
-      image: floristSlider1,
+      image: floristSlider3,
     },
 
     {
@@ -30,7 +30,7 @@ function FloristControl() {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
       price: '$25',
-      image: floristSlider1,
+      image: floristSlider2,
     },
   ];
 
