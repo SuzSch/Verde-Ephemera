@@ -7,9 +7,9 @@ function Item({ title, description, price, image, buttonText, onButtonClick }) {
   return (
 
 
-    <div class="card">
-      <div class="card-details">
-        <img src={image} alt={title} class="card-image" />
+    <div className="card">
+      <div className="card-details">
+        <img src={image} alt={title} className="card-image" />
         <h2>{title}</h2>
         <h3>{description}</h3>
         <h3>{price}</h3>

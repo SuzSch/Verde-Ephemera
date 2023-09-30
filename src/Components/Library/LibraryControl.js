@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import Slider from "../Slider";
@@ -9,26 +9,24 @@ import ItemList from "../ItemList";
 import './LibraryControl.css';
 
 function LibraryControl() {
-
   const libraryItems = [
     {
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider1,
     },
-
     {
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider2,
     },
-
     {
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider3,
     },
   ];
+
   const sliderImages = [librarySlider1, librarySlider2, librarySlider3];
 
   const styles = {
@@ -39,12 +37,34 @@ function LibraryControl() {
     }
   }
 
+  const [isFormVisible, setFormVisible] = useState(false);
+  const wrapperRef = useRef(null);
+
+  const toggleForm = () => {
+    setFormVisible(!isFormVisible);
+  };
+
+  const handleClickOutside = (event) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      setFormVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div>
       <Header />
-      <div class="popup-container">
-        <button class="hover-trigger">Log-in or Create Account</button>
-        <div class="popup-content">
+      <div ref={wrapperRef} className="popup-wrapper">
+        <button className="hover-trigger" onClick={toggleForm}>
+          Log-in or Create Account
+        </button>
+        <div className={`popup-content ${isFormVisible ? 'active' : ''}`}>
           <form>
             <h2>Login</h2>
             <div>
@@ -84,12 +104,11 @@ function LibraryControl() {
       <h2 style={styles.header}>This is some text about the library and how cool it is.</h2>
       <ItemList
         items={libraryItems}
-        buttonText="Check Me Out" />
+        buttonText="Check Me Out"
+      />
       <Footer />
     </div>
   );
 }
 
 export default LibraryControl;
-
-
