@@ -35,14 +35,23 @@ function FloristControl() {
   ];
 
   const sliderImages = [floristSlider1, floristSlider2, floristSlider3];
+
+  const styles = {
+    header: {
+      textAlign: 'center',
+      marginTop: '50px',
+      marginBottom: '50px'
+    }
+  }
+
   return (
     <div>
       <Header />
-      <h1>Welcome to the VerdeEphmera Flower Shop</h1>
+      <h1 style={styles.header}>Welcome to the VerdeEphmera Flower Shop</h1>
       
 
       <Slider images={sliderImages} interval={5000} autoplay={true} />
-      <h2>Ths is some text about what the florist has to offer.</h2>
+      <h2 style={styles.header}>Ths is some text about what the florist has to offer.</h2>
       <ItemList items={floristItems} buttonText='See Options'/>
       <Footer />
     </div>

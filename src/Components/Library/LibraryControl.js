@@ -29,16 +29,25 @@ function LibraryControl() {
     },
   ];
   const sliderImages = [librarySlider1, librarySlider2, librarySlider3];
+
+  const styles = {
+   header: {
+    textAlign: 'center',
+    marginTop: '50px',
+    marginBottom: '50px'
+   }
+
+  }
   return (
     <div>
       <Header />
-      <h1>This is the Library Page</h1>
+      <h1 style={styles.header}>Welcome to the VerdeEphemera Library</h1>
       <Slider
         images={sliderImages}
         interval={5000}
         autoplay={true}
       />
-      <h2>This is some text about the library and how cool it is.</h2>
+      <h2 style={styles.header}>This is some text about the library and how cool it is.</h2>
       <ItemList 
       items={libraryItems} 
       buttonText="Check Me Out"/>
