@@ -60,13 +60,13 @@ function LibraryControl() {
   return (
     <div>
       <Header />
-      <div ref={wrapperRef} className="popup-wrapper">
+      <div className="popup-wrapper">
         <button className="hover-trigger" onClick={toggleForm}>
           Log-in or Create Account
         </button>
         <div className={`popup-content ${isFormVisible ? 'active' : ''}`}>
           <form>
-            <h2>Login</h2>
+            <h2>Log-in</h2>
             <div>
               <label htmlFor="login-email">Email:</label>
               <input type="email" id="login-email" name="login-email" required />
