@@ -1,15 +1,29 @@
 .main-box {
-  background-color: #4e3e48;
-  padding: 20px;
+  position: relative;
   text-align: center;
-  color: antiquewhite;
 }
 
+/* Styling for the h1 element */
+.main-box h1 {
+  font-size: 36px;
+  opacity: 0;
+  /* Initially invisible */
+  transform: translateY(-20px);
+  /* Move up slightly */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Styling for the picture-gallery */
 .picture-gallery {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 20px;
-  margin-bottom: 50px;
+  /* Add spacing between h1 and images */
+}
+
+.main-box.in-view h1 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .picture-gallery img {
