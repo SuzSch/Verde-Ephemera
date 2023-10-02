@@ -7,8 +7,25 @@ import librarySlider2 from "../../images/book-4.jpg";
 import librarySlider3 from "../../images/book-5.jpg";
 import ItemList from "../ItemList";
 import './LibraryControl.css';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+
 
 function LibraryControl() {
+
+  const auth = getAuth();
+
+  const registerUser = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Registration error', errorMessage)
+    });
+  };
+
   const libraryItems = [
     {
       title: 'Book Title',
