@@ -16,14 +16,26 @@ function LibraryControl() {
 
   const registerUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error('Registration error', errorMessage)
-    });
+      .then((userCredential) => {
+        const user = userCredential.user;
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Registration error', errorMessage)
+      });
+  };
+
+  const loginUser = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Login error:', errorMessage);
+      });
   };
 
   const libraryItems = [
@@ -74,6 +86,27 @@ function LibraryControl() {
     };
   }, []);
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await loginUser(email, password);
+    } catch (error) {
+      console.error("Login error:", error.message);
+    }
+  };
+
+  const handleRegistration = async (e) => {
+    e.preventDefault();
+    try {
+      await registerUser(email, password);
+    } catch (error) {
+      console.error("Registration error:", error.message);
+    }
+  };
+
   return (
     <div>
       <Header />
@@ -82,19 +115,21 @@ function LibraryControl() {
           Log-in or Create Account
         </button>
         <div className={`popup-content ${isFormVisible ? 'active' : ''}`}>
-          <form>
+          <form onSubmit={handleLogin}>
             <h2>Log-in</h2>
             <div>
               <label htmlFor="login-email">Email:</label>
-              <input type="email" id="login-email" name="login-email" required />
+              <input type="email" id="login-email" name="login-email" value={email}
+                onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div>
               <label htmlFor="login-password">Password:</label>
-              <input type="password" id="login-password" name="login-password" required />
+              <input type="password" id="login-password" name="login-password" value={password}
+                onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <button type="submit">Log In</button>
           </form>
-          <form>
+          <form onSubmit={handleRegistration}>
             <h2>Create Account</h2>
             <div>
               <label htmlFor="signup-name">Name:</label>
