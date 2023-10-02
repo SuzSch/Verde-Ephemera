@@ -74,7 +74,11 @@ function LibraryControl() {
   };
 
   const handleClickOutside = (event) => {
-    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+    if (
+      wrapperRef.current &&
+      !wrapperRef.current.contains(event.target) &&
+      !event.target.classList.contains('popup-trigger')
+    ) {
       setFormVisible(false);
     }
   };
@@ -85,9 +89,6 @@ function LibraryControl() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -107,11 +108,16 @@ function LibraryControl() {
     }
   };
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+
   return (
     <div>
       <Header />
       <div className="popup-wrapper">
-        <button className="hover-trigger" onClick={toggleForm}>
+        <button className="hover-trigger popup-trigger" onClick={toggleForm}>
           Log-in or Create Account
         </button>
         <div className={`popup-content ${isFormVisible ? 'active' : ''}`}>
@@ -119,29 +125,31 @@ function LibraryControl() {
             <h2>Log-in</h2>
             <div>
               <label htmlFor="login-email">Email:</label>
-              <input type="email" id="login-email" name="login-email" value={email}
-                onChange={(e) => setEmail(e.target.value)} required />
+              <input type="email" id="login-email" name="login-email" value={loginEmail}
+                onChange={(e) => setLoginEmail(e.target.value)} required />
             </div>
             <div>
               <label htmlFor="login-password">Password:</label>
-              <input type="password" id="login-password" name="login-password" value={password}
-                onChange={(e) => setPassword(e.target.value)} required />
+              <input type="password" id="login-password" name="login-password" value={loginPassword}
+                onChange={(e) => setLoginPassword(e.target.value)} required />
             </div>
             <button type="submit">Log In</button>
           </form>
           <form onSubmit={handleRegistration}>
             <h2>Create Account</h2>
-            <div>
+            {/* <div>
               <label htmlFor="signup-name">Name:</label>
               <input type="text" id="signup-name" name="signup-name" required />
-            </div>
+            </div> */}
             <div>
               <label htmlFor="signup-email">Email:</label>
-              <input type="email" id="signup-email" name="signup-email" required />
+              <input type="email" id="signup-email" name="signup-email" value={email}
+                onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div>
               <label htmlFor="signup-password">Password:</label>
-              <input type="password" id="signup-password" name="signup-password" required />
+              <input type="password" id="signup-password" name="signup-password" value={password}
+                onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <button type="submit">Create Account</button>
           </form>
