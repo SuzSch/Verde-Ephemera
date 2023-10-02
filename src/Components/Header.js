@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
+import heartImage from './../images/anatomicalheart.png'
 
 function Header() {
 
@@ -55,7 +56,11 @@ function Header() {
         )}
       </div>
       <div className="fun-thing">
-        <a href="/">Fun Thing</a>
+        <img
+          src={heartImage}
+          alt="Fun Image"
+          height="150px"
+        />
       </div>
     </header>
   );
