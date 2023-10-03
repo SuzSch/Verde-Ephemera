@@ -3,22 +3,55 @@
   text-align: center;
 }
 
-/* Styling for the h1 element */
 .main-box h1 {
   font-size: 36px;
   opacity: 0;
-  /* Initially invisible */
   transform: translateY(-20px);
-  /* Move up slightly */
+  transition: opacity 1s ease, transform 1s ease;
+  position: relative;
+  z-index: 1;
+
+}
+
+.picture-gallery {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.text-overlay h1,
+.text-overlay h3 {
+  font-size: 36px;
+  opacity: 0;
+  transform: translateY(-20px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Styling for the picture-gallery */
-.picture-gallery {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  /* Add spacing between h1 and images */
+.main-box h1 {
+  /* Additional styling for the h1 element */
+}
+
+.main-box h3 {
+  color: antiquewhite;
+  /* Additional styling for the h3 element */
+}
+
+.main-box.in-view h1,
+.main-box.in-view h3 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .main-box.in-view h1 {
@@ -30,6 +63,8 @@
   margin: 0 10px;
   max-width: 25%;
   height: 350px;
+  opacity: 1;
+  transition: none;
 }
 
 .shop-info {
@@ -46,4 +81,19 @@
 .shop-description {
   flex-grow: 1;
   padding-left: 20px;
+}
+
+.centered-heading h1.in-view {
+  opacity: 1;
+}
+
+.picture-gallery h1 {
+  font-size: 50px;
+  color: antiquewhite;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+  position: relative;
+  z-index: 1;
+  
 }
