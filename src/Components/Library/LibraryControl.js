@@ -18,7 +18,6 @@ function LibraryControl() {
       description: "A new book description",
 
     };
-
     addBookToFirestore(bookData);
   };
 
@@ -76,6 +75,8 @@ function LibraryControl() {
     e.preventDefault();
     try {
       await loginUser(email, password);
+      setIsLoggedIn(true);
+      setUserEmail(email);
     } catch (error) {
       console.error("Login error:", error.message);
     }
@@ -85,6 +86,8 @@ function LibraryControl() {
     e.preventDefault();
     try {
       await registerUser(email, password);
+      setIsLoggedIn(true);
+      setUserEmail(email);
     } catch (error) {
       console.error("Registration error:", error.message);
     }
@@ -121,14 +124,20 @@ function LibraryControl() {
   const [password, setPassword] = useState('');
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
 
   return (
     <div>
       <Header />
       <div className="popup-wrapper">
-        <button className="hover-trigger popup-trigger" onClick={toggleForm}>
-          Log-in or Create Account
-        </button>
+        {isLoggedIn ? (
+          <p>Welcome {userEmail}</p>
+        ) : (
+          <button className="hover-trigger popup-trigger" onClick={toggleForm}>
+            Log-in or Create Account
+          </button>
+        )}
         <div className={`popup-content ${isFormVisible ? 'active' : ''}`}>
           <form onSubmit={handleLogin}>
             <h2>Log-in</h2>
