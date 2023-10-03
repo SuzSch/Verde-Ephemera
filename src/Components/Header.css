@@ -1,4 +1,3 @@
-/* CSS for Header Component */
 .header {
   display: flex;
   justify-content: space-between;
@@ -35,9 +34,16 @@
   left: 0;
   background: #7e4f34;
   list-style: none;
-  padding: 10px 0;
-  margin: 0;
+  opacity: 0;
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   background-image: url('/src/images/vintage-speckles.png');
+}
+
+.dropdown-list.open {
+  opacity: 1;
+  transform: scaleY(1);
 }
 
 .dropdown-list li {
@@ -57,9 +63,7 @@
 
 .fun-thing:hover {
   transform: scale(1.05);
-  /* Increase the size slightly */
   animation: pulse 2s infinite;
-  /* Apply the pulse animation */
 }
 
 @keyframes pulse {

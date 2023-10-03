@@ -31,7 +31,7 @@ function Header() {
           What We Offer
         </button>
         {isDropdownOpen && (
-          <ul className="dropdown-list" style={{ display: isDropdownOpen ? 'block' : 'none' }} >
+          <ul className={`dropdown-list ${isDropdownOpen ? 'open' : ''}`} >
             <li>
               <Link to="/library" onClick={() => handleMenuClick('/library')}>
                 Library
