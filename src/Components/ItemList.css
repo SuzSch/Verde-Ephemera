@@ -1,7 +1,7 @@
 .item-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .item {
@@ -14,7 +14,6 @@
 .item img {
   max-width: 100%;
   height: auto;
-  /* padding: 30px; */
 }
 
 .item-button {
