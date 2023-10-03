@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import './Home.css';
@@ -9,43 +9,20 @@ import libraryHomePhoto from '../images/library-home.jpg';
 import cafeHomePhoto from '../images/cafe-home.jpg';
 
 function Home() {
-  const mainBoxRef = useRef(null);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           mainBoxRef.current.classList.add('in-view');
-  //         }
-  //       });
-  //     },
-  //     {
-  //       threshold: 0.5,
-  //     }
-  //   );
-  //   observer.observe(mainBoxRef.current);
-
-  //   return () => {
-  //     observer.unobserve(mainBoxRef.current);
-  //   }
-  // }, []);
-
   return (
     <div>
       <Header />
-      <div className="main-box" ref={mainBoxRef}>
+      <div className="main-box">
+        <h1>Welcome to VerdeEphemera</h1>
+        <h3>(Savor Life's Temporal Joys)</h3>
         <div className="picture-gallery">
-          <div className='text-overlay'>
-            <h1>Welcome to VerdeEphemera</h1>
-            <h3>(Savor Life's Temporal Joys)</h3>
-          </div>
           <img src={bakeryHomePhoto} alt="Image 1" />
-          <img src={libraryHomePhoto} alt="Image 3" />
           <img src={floristHomePhoto} alt="Image 2" />
+          <img src={libraryHomePhoto} alt="Image 3" />
           <img src={cafeHomePhoto} alt="Image 3" />
         </div>
       </div>
+      
       <div className="shop-info">
         <div className="shop-photo">
           <img src={shopPhoto} alt="Shop Photo" />
@@ -53,9 +30,18 @@ function Home() {
         <div className="shop-description">
           <h2>About</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            vitae elit libero, a pharetra augue. Sed posuere consectetur est at
-            lobortis. Vestibulum id ligula porta felis euismod semper.
+            Verde Ephemera is a unique oasis nestled in the heart of the city, where the boundaries between literature, nature, and culinary artistry blur to create an enchanting experience like no other. Our establishment is a harmonious blend of a library, florist, cafe, and bakery, designed to transport you to a world where time stands still.
+          </p>
+        </div>
+      </div>
+
+      <div className="shop-info">
+        <div className="shop-photo">
+          <img src={shopPhoto} alt="Shop Photo" />
+        </div>
+        <div className="shop-description">
+          <p>
+            Step into Verde Ephemera and be transported to a realm of dark and cozy elegance. The warm, dimly lit ambiance welcomes you with open arms, encouraging you to leave the hustle and bustle of the outside world behind. Soft, mellow lighting enhances the intimate atmosphere, inviting you to linger and lose yourself in the moment.
           </p>
         </div>
       </div>

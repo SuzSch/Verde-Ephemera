@@ -1,71 +1,21 @@
 .main-box {
-  position: relative;
-  text-align: center;
   background-color: #4e3e48;
-  padding:5px;
-  margin-top: 10px;
-}
-
-.main-box h1 {
-  font-size: 36px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 1s ease, transform 1s ease;
-  position: relative;
-  z-index: 1;
-
+  padding: 20px;
+  text-align: center;
+  color: antiquewhite;
 }
 
 .picture-gallery {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-}
-
-.text-overlay h1,
-.text-overlay h3 {
-  font-size: 36px;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 1s ease, transform 1s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.main-box h3 {
-  color: antiquewhite;
-  font-size: medium;
-  font-family: Cambria;
-}
-
-.main-box.in-view h1,
-.main-box.in-view h3 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.main-box.in-view h1 {
-  opacity: 1;
-  transform: translateY(0);
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .picture-gallery img {
-  margin: 0 50px;
-  max-width: 100%;
-  height: auto;
-  opacity: 1;
+  margin: 0 10px;
+  max-width: 25%;
+  height: 350px;
 }
 
 .shop-info {
@@ -82,19 +32,4 @@
 .shop-description {
   flex-grow: 1;
   padding-left: 20px;
-}
-
-.centered-heading h1.in-view {
-  opacity: 1;
-}
-
-.picture-gallery h1 {
-  font-size: 80px;
-  color: antiquewhite;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 1s ease, transform 1s ease;
-  position: relative;
-  z-index: 1;
-  
 }
