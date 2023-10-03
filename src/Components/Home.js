@@ -7,6 +7,7 @@ import bakeryHomePhoto from '../images/bakery-home.jpg';
 import floristHomePhoto from '../images/florist-home.jpg';
 import libraryHomePhoto from '../images/library-home.jpg';
 import cafeHomePhoto from '../images/cafe-home.jpg';
+import shopPhoto2 from '../images/shop2.jpg';
 
 function Home() {
   return (
@@ -24,7 +25,7 @@ function Home() {
       </div>
       
       <div className="shop-info">
-        <div className="shop-photo">
+        <div className="shop-photo" >
           <img src={shopPhoto} alt="Shop Photo" />
         </div>
         <div className="shop-description">
@@ -35,11 +36,11 @@ function Home() {
         </div>
       </div>
 
-      <div className="shop-info">
-        <div className="shop-photo">
-          <img src={shopPhoto} alt="Shop Photo" />
+      <div className="shop-info2">
+        <div className="shop-photo2" >
+          <img src={shopPhoto2} alt="Shop Photo" />
         </div>
-        <div className="shop-description">
+        <div className="shop-description2">
           <p>
             Step into Verde Ephemera and be transported to a realm of dark and cozy elegance. The warm, dimly lit ambiance welcomes you with open arms, encouraging you to leave the hustle and bustle of the outside world behind. Soft, mellow lighting enhances the intimate atmosphere, inviting you to linger and lose yourself in the moment.
           </p>
