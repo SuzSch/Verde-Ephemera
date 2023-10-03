@@ -28,7 +28,7 @@ function Header() {
       </div>
       <div className="dropdown-menu">
         <button className="dropdown-button" onClick={toggleDropdown}>
-          What We Offer
+          See What We Have To Offer
         </button>
         {isDropdownOpen && (
           <ul className={`dropdown-list ${isDropdownOpen ? 'open' : ''}`} >
