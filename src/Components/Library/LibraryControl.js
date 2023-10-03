@@ -104,16 +104,19 @@ function LibraryControl() {
   }
   const libraryItems = [
     {
+      key: 1,
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider1,
     },
     {
+      key: 2,
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider2,
     },
     {
+      key:3,
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider3,

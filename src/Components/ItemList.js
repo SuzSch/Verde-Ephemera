@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Item from './Item';
-import './ItemList.css'; 
+import './ItemList.css';
 
-function ItemList({ items, buttonText, handleButtonClick }) {
+function ItemList({ items, buttonText }) {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (itemId) => {
+    navigate(`/item/${itemId}`);
+  };
+
   return (
     <div className="item-list">
       {items.map((item, index) => (
@@ -13,7 +20,7 @@ function ItemList({ items, buttonText, handleButtonClick }) {
           price={item.price}
           image={item.image}
           buttonText={buttonText}
-          onButtonClick={handleButtonClick}
+          onButtonClick={() => handleButtonClick(item.itemId)}
         />
       ))}
     </div>

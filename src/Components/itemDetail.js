@@ -1,22 +1,14 @@
 import React from 'react';
-import Item from './Item';
+import { useParams } from 'react-router-dom';
 
-function ItemDetail() {
+function ItemDetails() {
+  const { itemId } = useParams();
   return (
-    <div className="item-detail">
-      {items.map((item, index) => (
-        <Item
-          key={index}
-          title={item.title}
-          description={item.description}
-          price={item.price}
-          image={item.image}
-          buttonText={buttonText}
-          onButtonClick={handleButtonClick}
-        />
-      ))}
+    <div>
+      <h2>Item Details</h2>
+      {/* Display item details here */}
     </div>
   );
 }
 
-export default ItemDetail;
+export default ItemDetails;
