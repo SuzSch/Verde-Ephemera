@@ -11,25 +11,25 @@ import cafeHomePhoto from '../images/cafe-home.jpg';
 function Home() {
   const mainBoxRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            mainBoxRef.current.classList.add('in-view');
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-    observer.observe(mainBoxRef.current);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           mainBoxRef.current.classList.add('in-view');
+  //         }
+  //       });
+  //     },
+  //     {
+  //       threshold: 0.5,
+  //     }
+  //   );
+  //   observer.observe(mainBoxRef.current);
 
-    return () => {
-      observer.unobserve(mainBoxRef.current);
-    }
-  }, []);
+  //   return () => {
+  //     observer.unobserve(mainBoxRef.current);
+  //   }
+  // }, []);
 
   return (
     <div>
