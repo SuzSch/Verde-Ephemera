@@ -40,10 +40,10 @@ function Home() {
             <h1>Welcome to VerdeEphemera</h1>
             <h3>(Savor Life's Temporal Joys)</h3>
           </div>
-            <img src={bakeryHomePhoto} alt="Image 1" />
-            <img src={floristHomePhoto} alt="Image 2" />
-            <img src={libraryHomePhoto} alt="Image 3" />
-            <img src={cafeHomePhoto} alt="Image 3" />
+          <img src={bakeryHomePhoto} alt="Image 1" />
+          <img src={libraryHomePhoto} alt="Image 3" />
+          <img src={floristHomePhoto} alt="Image 2" />
+          <img src={cafeHomePhoto} alt="Image 3" />
         </div>
       </div>
       <div className="shop-info">

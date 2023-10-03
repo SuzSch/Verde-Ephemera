@@ -1,6 +1,9 @@
 .main-box {
   position: relative;
   text-align: center;
+  background-color: #4e3e48;
+  padding:5px;
+  margin-top: 10px;
 }
 
 .main-box h1 {
@@ -15,9 +18,9 @@
 
 .picture-gallery {
   margin-top: 20px;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -34,18 +37,17 @@
 .text-overlay h1,
 .text-overlay h3 {
   font-size: 36px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.main-box h1 {
-  /* Additional styling for the h1 element */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .main-box h3 {
   color: antiquewhite;
-  /* Additional styling for the h3 element */
+  font-size: medium;
+  font-family: Cambria;
 }
 
 .main-box.in-view h1,
@@ -60,11 +62,10 @@
 }
 
 .picture-gallery img {
-  margin: 0 10px;
-  max-width: 25%;
-  height: 350px;
+  margin: 0 50px;
+  max-width: 100%;
+  height: auto;
   opacity: 1;
-  transition: none;
 }
 
 .shop-info {
@@ -88,7 +89,7 @@
 }
 
 .picture-gallery h1 {
-  font-size: 50px;
+  font-size: 80px;
   color: antiquewhite;
   opacity: 0;
   transform: translateY(-20px);
