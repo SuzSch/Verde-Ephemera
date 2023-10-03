@@ -8,7 +8,7 @@ import librarySlider3 from "../../images/book-5.jpg";
 import ItemList from "../ItemList";
 import './LibraryControl.css';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-
+import { addBookToFirestore } from '../firebase';
 
 function LibraryControl() {
 
