@@ -22,8 +22,9 @@
   display: flex;
   align-items: center;
   margin-top: 40px;
-  background-color: #3b4229;
+  background-color: #3b4229cf;
   margin: 30px;
+  border-radius: 10px;
 }
 
 .shop-photo img {
@@ -41,7 +42,8 @@
   flex-direction: row-reverse;
   align-items: center;
   margin: 30px;
-  background-color: #3b4229;
+  background-color: #3b4229cf;
+  border-radius: 10px;
 }
 
 

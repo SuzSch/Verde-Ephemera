@@ -29,10 +29,9 @@ function Home() {
           <img src={shopPhoto} alt="Shop Photo" />
         </div>
         <div className="shop-description">
-          <h2>About</h2>
-          <p>
+          <h2>
             Verde Ephemera is a unique oasis nestled in the heart of the city, where the boundaries between literature, nature, and culinary artistry blur to create an enchanting experience like no other. Our establishment is a harmonious blend of a library, florist, cafe, and bakery, designed to transport you to a world where time stands still.
-          </p>
+          </h2>
         </div>
       </div>
 
@@ -41,12 +40,11 @@ function Home() {
           <img src={shopPhoto2} alt="Shop Photo" />
         </div>
         <div className="shop-description2">
-          <p>
+          <h2>
             Step into Verde Ephemera and be transported to a realm of dark and cozy elegance. The warm, dimly lit ambiance welcomes you with open arms, encouraging you to leave the hustle and bustle of the outside world behind. Soft, mellow lighting enhances the intimate atmosphere, inviting you to linger and lose yourself in the moment.
-          </p>
+          </h2>
         </div>
       </div>
-
       <Footer />
     </div>
   );
