@@ -12,6 +12,16 @@ import { addBookToFirestore } from '../firebase';
 
 function LibraryControl() {
 
+  const handleAddBook = () => {
+    const bookData = {
+      tile: 'New Book Title',
+      description: "A new book description",
+
+    };
+
+    addBookToFirestore(bookData);
+  };
+
   const auth = getAuth();
 
   const registerUser = (email, password) => {
@@ -37,34 +47,6 @@ function LibraryControl() {
         console.error('Login error:', errorMessage);
       });
   };
-
-  const libraryItems = [
-    {
-      title: 'Book Title',
-      description: 'A great book.',
-      image: librarySlider1,
-    },
-    {
-      title: 'Book Title',
-      description: 'A great book.',
-      image: librarySlider2,
-    },
-    {
-      title: 'Book Title',
-      description: 'A great book.',
-      image: librarySlider3,
-    },
-  ];
-
-  const sliderImages = [librarySlider1, librarySlider2, librarySlider3];
-
-  const styles = {
-    header: {
-      textAlign: 'center',
-      marginTop: '50px',
-      marginBottom: '50px',
-    }
-  }
 
   const [isFormVisible, setFormVisible] = useState(false);
   const wrapperRef = useRef(null);
@@ -107,6 +89,33 @@ function LibraryControl() {
       console.error("Registration error:", error.message);
     }
   };
+
+  const sliderImages = [librarySlider1, librarySlider2, librarySlider3];
+
+  const styles = {
+    header: {
+      textAlign: 'center',
+      marginTop: '50px',
+      marginBottom: '50px',
+    }
+  }
+  const libraryItems = [
+    {
+      title: 'Book Title',
+      description: 'A great book.',
+      image: librarySlider1,
+    },
+    {
+      title: 'Book Title',
+      description: 'A great book.',
+      image: librarySlider2,
+    },
+    {
+      title: 'Book Title',
+      description: 'A great book.',
+      image: librarySlider3,
+    },
+  ];
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
