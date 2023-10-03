@@ -3,17 +3,17 @@
   padding: 20px;
   text-align: center;
   color: antiquewhite;
+  margin-top:20px;
 }
 
 .picture-gallery {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin: 30px;
 }
 
 .picture-gallery img {
-  margin: 0 10px;
+  margin: 30px;
   max-width: 25%;
   height: 350px;
 }
@@ -22,6 +22,8 @@
   display: flex;
   align-items: center;
   margin-top: 40px;
+  background-color: #3b4229;
+  margin: 30px;
 }
 
 .shop-photo img {
@@ -31,15 +33,15 @@
 
 .shop-description {
   flex-grow: 1;
-  padding-left: 20px;
+ margin: 20px;
 }
 
 .shop-info2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-top: 40px;
-  margin-left: 20px;
+  margin: 30px;
+  background-color: #3b4229;
 }
 
 
@@ -51,6 +53,7 @@
 
 }
 
-.shop-description {
+.shop-description2 {
   flex-grow: 1;
+  margin: 20px;
 }
