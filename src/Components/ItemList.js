@@ -12,9 +12,10 @@ function ItemList({ items, buttonText }) {
 
   return (
     <div className="item-list">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <Item
           key={item.itemId}
+          item={item}
           title={item.title}
           description={item.description}
           price={item.price}
