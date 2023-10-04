@@ -1,9 +1,12 @@
 .main-box {
-  background-color: #4e3e48;
+  background-color: #4e3e48c0;
   padding: 20px;
   text-align: center;
   color: antiquewhite;
-  margin-top:20px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: x-large;
 }
 
 .picture-gallery {
@@ -34,7 +37,9 @@
 
 .shop-description {
   flex-grow: 1;
- margin: 20px;
+  margin: 20px;
+  color: antiquewhite;
+  font-size: smaller;
 }
 
 .shop-info2 {
@@ -58,4 +63,6 @@
 .shop-description2 {
   flex-grow: 1;
   margin: 20px;
+  color: antiquewhite;
+  font-size: smaller;
 }

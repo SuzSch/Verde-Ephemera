@@ -40,31 +40,31 @@ function Header() {
       </div>
       <div className="dropdown-menu">
         <button className="dropdown-button" onClick={toggleDropdown}>
-          See What We Have To Offer
+          MENU
         </button>
         {isDropdownOpen && (
-          <ul className={`dropdown-list ${isDropdownOpen ? 'open' : ''}`} >
-            <li>
+          <div className={`dropdown-list ${isDropdownOpen ? 'open' : ''}`} >
+            <h3>
               <Link to="/library" onClick={() => handleMenuClick('/library')}>
                 Library
               </Link>
-            </li>
-            <li>
+            </h3>
+            <h3>
               <Link to="/florist" onClick={() => handleMenuClick('/florist')}>
                 Florist
               </Link>
-            </li>
-            <li>
+            </h3>
+            <h3>
               <Link to="/cafe" onClick={() => handleMenuClick('/cafe')}>
                 Cafe
               </Link>
-            </li>
-            <li>
+            </h3>
+            <h3>
               <Link to="/bakery" onClick={() => handleMenuClick('/bakery')}>
                 Bakery
               </Link>
-            </li>
-          </ul>
+            </h3>
+          </div>
         )}
       </div>
       <div className="fun-thing" onClick={showTweet}>

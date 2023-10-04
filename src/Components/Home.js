@@ -15,7 +15,7 @@ function Home() {
       <Header />
       <div className="main-box">
         <h1>Welcome to VerdeEphemera</h1>
-        <h3>(Savor Life's Temporal Joys)</h3>
+        <h5>Savor Life's Temporal Joys</h5>
         <div className="picture-gallery">
           <img src={bakeryHomePhoto} alt="Image 1" />
           <img src={floristHomePhoto} alt="Image 2" />

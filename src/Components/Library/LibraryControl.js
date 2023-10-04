@@ -2,9 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import Slider from "../Slider";
-import librarySlider1 from "../../images/slider-book1.jpeg";
-import librarySlider2 from "../../images/book-4.jpg";
-import librarySlider3 from "../../images/book-5.jpg";
+import Book1 from "../../images/book-4.jpg";
+import Book2 from "../../images/book-5.jpg";
+import Book3 from "../../images/book-6.jpg";
+import librarySlider1 from "../../images/library-home.jpg";
+import librarySlider2 from "../../images/library2.jpg";
+import librarySlider3 from "../../images/library3.jpg";
 import ItemList from "../ItemList";
 import './LibraryControl.css';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
@@ -101,6 +104,7 @@ function LibraryControl() {
       textAlign: 'center',
       marginTop: '50px',
       marginBottom: '50px',
+      color: 'antiquewhite',
     }
   }
   const libraryItems = [
@@ -108,19 +112,19 @@ function LibraryControl() {
       itemId: 1,
       title: 'Book Title',
       description: 'A great book.',
-      image: librarySlider1,
+      image: Book1,
     },
     {
       itemId: 2,
       title: 'Book Title',
       description: 'A great book.',
-      image: librarySlider2,
+      image: Book2,
     },
     {
       itemId:3,
       title: 'Book Title',
       description: 'A great book.',
-      image: librarySlider3,
+      image: Book3,
     },
   ];
 
@@ -182,7 +186,7 @@ function LibraryControl() {
         images={sliderImages}
         interval={5000}
         autoplay={true}
-      />
+        />
       <h2 style={styles.header}>This is some text about the library and how cool it is.</h2>
       <ItemList
         items={libraryItems}

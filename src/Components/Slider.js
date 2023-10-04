@@ -10,11 +10,14 @@ function Slider({ images, interval, autoplay }) {
 
   const slideStyles = {
     width: '100%',
+    background: '#4e3e48c0',
+    padding: '10px',
   };
 
   const imageStyles = {
     width: 'auto', 
     margin: '0 auto', 
+    height: '500px'
   };
 
   return (
