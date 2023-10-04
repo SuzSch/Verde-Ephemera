@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import LibraryControl from './Library/LibraryControl';
 import FloristControl from './Florist/FloristControl';
-import ItemDetail from './itemDetail';
+import ItemDetail from './ItemDetail';
 
 
 function App() {

@@ -10,7 +10,7 @@ import './LibraryControl.css';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { addBookToFirestore } from '../firebase';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './itemDetail';
+import ItemDetail from '../ItemDetail'
 
 function LibraryControl() {
 
@@ -189,7 +189,6 @@ function LibraryControl() {
         items={libraryItems}
         buttonText="Check Me Out"
       />
-      <Route path="/item/:itemId" element={<ItemDetail libraryItems={libraryItems} />} />
       <Footer />
     </div>
   );
