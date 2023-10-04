@@ -9,7 +9,7 @@ import ItemList from "../ItemList";
 import './LibraryControl.css';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { addBookToFirestore } from '../firebase';
-import { useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ItemDetail from '../ItemDetail'
 
 function LibraryControl() {
@@ -18,7 +18,6 @@ function LibraryControl() {
     const bookData = {
       tile: 'New Book Title',
       description: "A new book description",
-
     };
     addBookToFirestore(bookData);
   };
@@ -189,6 +188,9 @@ function LibraryControl() {
         items={libraryItems}
         buttonText="Check Me Out"
       />
+      <Routes>
+      <Route path="/item/:itemId" element={<ItemDetail libraryItems={libraryItems} />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Item from './Item';
 import './ItemList.css';
 
@@ -14,7 +14,7 @@ function ItemList({ items, buttonText }) {
     <div className="item-list">
       {items.map((item, index) => (
         <Item
-          key={index}
+          key={item.itemId}
           title={item.title}
           description={item.description}
           price={item.price}
