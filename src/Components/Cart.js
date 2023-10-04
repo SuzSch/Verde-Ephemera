@@ -8,7 +8,7 @@ function Cart({ items, onRemoveItem, onCheckout }) {
     <div className="cart">
       
       {items.map((item, index) => (
-        <div key={index} className="cart-item">
+        <div itemId={index} className="cart-item">
           
           <p>{item.name}</p>
           <p>${item.price}</p>

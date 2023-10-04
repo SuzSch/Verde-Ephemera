@@ -5,8 +5,6 @@ function Item({ title, description, price, image, buttonText, onButtonClick }) {
 
 
   return (
-
-
     <div className="card">
       <div className="card-details">
         <img src={image} alt={title} className="card-image" />

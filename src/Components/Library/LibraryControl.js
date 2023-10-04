@@ -9,6 +9,8 @@ import ItemList from "../ItemList";
 import './LibraryControl.css';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { addBookToFirestore } from '../firebase';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './itemDetail';
 
 function LibraryControl() {
 
@@ -104,19 +106,19 @@ function LibraryControl() {
   }
   const libraryItems = [
     {
-      key: 1,
+      itemId: 1,
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider1,
     },
     {
-      key: 2,
+      itemId: 2,
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider2,
     },
     {
-      key:3,
+      itemId:3,
       title: 'Book Title',
       description: 'A great book.',
       image: librarySlider3,
@@ -187,6 +189,7 @@ function LibraryControl() {
         items={libraryItems}
         buttonText="Check Me Out"
       />
+      <Route path="/item/:itemId" element={<ItemDetail libraryItems={libraryItems} />} />
       <Footer />
     </div>
   );
