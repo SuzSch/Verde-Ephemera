@@ -189,7 +189,7 @@ function LibraryControl() {
         buttonText="Check Me Out"
       />
       <Routes>
-      <Route path="/item/:itemId" element={<ItemDetail libraryItems={libraryItems} />} />
+      <Route path="/Item/:itemId" element={<ItemDetail libraryItems={libraryItems} />} />
       </Routes>
       <Footer />
     </div>
