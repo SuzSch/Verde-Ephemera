@@ -9,7 +9,7 @@ import arrang3 from "../../images/florist-slider-3.jpg";
 import slider1 from "../../images/floralSlider1.jpg";
 import slider2 from "../../images/floralSlider2.jpg";
 import slider3 from "../../images/floralSlider3.jpg";
-
+import Cart from "../Cart";
 
 
 function FloristControl() {
@@ -18,6 +18,12 @@ function FloristControl() {
 
   const addToCart = (item) => {
     setCart([...cart, item]);
+  };
+
+  const removeFromCart = (index) => {
+    const updatedCart = [...cart];
+    updatedCart.splice(index, 1);
+    setCart(updatedCart);
   };
 
   const floristItems = [
@@ -59,13 +65,13 @@ function FloristControl() {
       <Header />
       <h1 style={styles.header}>Welcome to the VerdeEphmera Flower Shop</h1>
 
-
       <Slider images={sliderImages}
         interval={5000}
         autoplay={true}
       />
-      <h2 style={styles.header}>Ths is some text about what the florist has to offer.</h2>
+      <h2 style={styles.header}>This is some text about what the florist has to offer.</h2>
       <ItemList items={floristItems} buttonText='Buy me' onBuyMe={addToCart} />
+      <Cart cart={cart} removeFromCart={removeFromCart} />
       <Footer />
     </div>
   );
