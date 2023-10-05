@@ -15,15 +15,21 @@ import Cart from "../Cart";
 function FloristControl() {
 
   const [cart, setCart] = useState([]);
+  const [cartVisible, setCartVisible] = useState(false);
 
   const addToCart = (item) => {
     setCart([...cart, item]);
+    setCartVisible(true);
   };
 
   const removeFromCart = (index) => {
     const updatedCart = [...cart];
     updatedCart.splice(index, 1);
     setCart(updatedCart);
+
+    if (updatedCart.length === 0) {
+      setCartVisible(false);
+    }
   };
 
   const floristItems = [
@@ -71,7 +77,7 @@ function FloristControl() {
       />
       <h2 style={styles.header}>This is some text about what the florist has to offer.</h2>
       <ItemList items={floristItems} buttonText='Buy me' onBuyMe={addToCart} />
-      <Cart cart={cart} removeFromCart={removeFromCart} />
+      {cartVisible && <Cart cart={cart} removeFromCart={removeFromCart} floristItems={floristItems} />}
       <Footer />
     </div>
   );

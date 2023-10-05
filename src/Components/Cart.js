@@ -1,13 +1,15 @@
 import React from "react";
+import './Cart.css';
 
-function Cart({ cart, removeFromCart }) {
+function Cart({ cart, removeFromCart, floristItems }) {
   return (
     <div className="cart">
       <h2>Shopping Cart</h2>
       <ul>
-        {cart.map((item, index) => (
+        {cart.map((itemIndex, index) => (
           <li key={index}>
-            <span>{item.description} - {item.price}</span>
+            <span>{floristItems[itemIndex].description} - {floristItems[itemIndex].price}</span>
+            <span> <img src={floristItems[itemIndex].image}/></span>
             <button onClick={() => removeFromCart(index)}>Remove</button>
           </li>
         ))}
