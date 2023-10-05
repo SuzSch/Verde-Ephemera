@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import Item from './Item';
 import './ItemList.css';
 
-function ItemList({ items, buttonText }) {
+function ItemList({ items, buttonText, onBuyMe }) {
   const navigate = useNavigate();
 
   const handleButtonClick = (itemId) => {

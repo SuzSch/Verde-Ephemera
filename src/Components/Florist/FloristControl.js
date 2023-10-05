@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import Slider from "../Slider";
@@ -13,6 +13,12 @@ import slider3 from "../../images/floralSlider3.jpg";
 
 
 function FloristControl() {
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
 
   const floristItems = [
     {
@@ -43,7 +49,8 @@ function FloristControl() {
     header: {
       textAlign: 'center',
       marginTop: '50px',
-      marginBottom: '50px'
+      marginBottom: '50px',
+      color: 'antiquewhite'
     }
   }
 
@@ -51,14 +58,14 @@ function FloristControl() {
     <div>
       <Header />
       <h1 style={styles.header}>Welcome to the VerdeEphmera Flower Shop</h1>
-      
 
-      <Slider images={sliderImages} 
-      interval={5000} 
-      autoplay={true} 
+
+      <Slider images={sliderImages}
+        interval={5000}
+        autoplay={true}
       />
       <h2 style={styles.header}>Ths is some text about what the florist has to offer.</h2>
-      <ItemList items={floristItems} buttonText='Buy me'/>
+      <ItemList items={floristItems} buttonText='Buy me' onBuyMe={addToCart} />
       <Footer />
     </div>
   );
