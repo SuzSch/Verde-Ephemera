@@ -1,13 +1,16 @@
-// FloristControl.js
-
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import Slider from "../Slider";
 import ItemList from "../ItemList"
-import floristSlider1 from "../../images/florist-slider-1.jpg";
-import floristSlider2 from "../../images/florist-slider-2.jpg";
-import floristSlider3 from "../../images/florist-slider-3.jpg";
+import arrang1 from "../../images/florist-slider-1.jpg";
+import arrang2 from "../../images/florist-slider-2.jpg";
+import arrang3 from "../../images/florist-slider-3.jpg";
+import slider1 from "../../images/floralSlider1.jpg";
+import slider2 from "../../images/floralSlider2.jpg";
+import slider3 from "../../images/floralSlider3.jpg";
+
+
 
 function FloristControl() {
 
@@ -15,26 +18,26 @@ function FloristControl() {
     {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
-      price: '$25',
-      image: floristSlider3,
+      price: '$85',
+      image: arrang3,
     },
 
     {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
-      price: '$25',
-      image: floristSlider1,
+      price: '$85',
+      image: arrang1,
     },
 
     {
       title: 'Flower Bouquet',
       description: 'A beautiful bouquet of assorted flowers.',
-      price: '$25',
-      image: floristSlider2,
+      price: '$85',
+      image: arrang2,
     },
   ];
 
-  const sliderImages = [floristSlider1, floristSlider2, floristSlider3];
+  const sliderImages = [slider1, slider2, slider3];
 
   const styles = {
     header: {
@@ -50,9 +53,12 @@ function FloristControl() {
       <h1 style={styles.header}>Welcome to the VerdeEphmera Flower Shop</h1>
       
 
-      <Slider images={sliderImages} interval={5000} autoplay={true} />
+      <Slider images={sliderImages} 
+      interval={5000} 
+      autoplay={true} 
+      />
       <h2 style={styles.header}>Ths is some text about what the florist has to offer.</h2>
-      <ItemList items={floristItems} buttonText='See Options'/>
+      <ItemList items={floristItems} buttonText='Buy me'/>
       <Footer />
     </div>
   );
