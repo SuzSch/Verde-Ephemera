@@ -1,68 +1,71 @@
+/* vw = viewport width */
+
 .main-box {
   background-color: #4e3e48c0;
-  padding: 20px;
+  padding: 5vw; 
   text-align: center;
   color: antiquewhite;
-  margin-top: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: x-large;
+  margin: 5vw; 
+  font-size: 1.5em; 
 }
 
 .picture-gallery {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 5px;
+  flex-wrap: wrap;
 }
 
 .picture-gallery img {
-  margin: 30px;
-  max-width: 25%;
-  height: 350px;
+  height: 400px;
+  margin: 10px;
+  object-fit: cover;
+  max-width: 100%;
 }
 
-.shop-info {
+.shop-info, .shop-info2 {
   display: flex;
-  align-items: center;
-  margin-top: 40px;
-  background-color: #7e4f347a;
-  margin: 30px;
-  border-radius: 10px;
-}
-
-.shop-photo img {
-  max-width: 300px;
-  padding: 30px;
-}
-
-.shop-description {
-  flex-grow: 1;
-  margin: 20px;
-  color: antiquewhite;
-  font-size: smaller;
-}
-
-.shop-info2 {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin: 30px;
+  flex-direction: column; 
+  margin: 5vw; 
   background-color: #7e4f347a;
   border-radius: 10px;
 }
 
-
-.shop-photo2 img {
-  float: right;
-  margin-left: 20px;
-  max-width: 300px;
-  padding: 30px;
-
+.shop-photo img, .shop-photo2 img {
+  max-width: 100%; 
+  padding: 5vw; 
 }
 
-.shop-description2 {
-  flex-grow: 1;
-  margin: 20px;
+.shop-description, .shop-description2 {
+  margin: 2vw; 
   color: antiquewhite;
-  font-size: smaller;
+  font-size: 1em; 
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .picture-gallery {
+    display: flex;
+    justify-content: center;
+    margin: 5vw;
+    
+  }
+
+  .shop-info {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .shop-info2 {
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .shop-photo img,
+  .shop-photo2 img {
+    max-width: 300px;
+    /* image-orientation: ; */
+  }
 }
